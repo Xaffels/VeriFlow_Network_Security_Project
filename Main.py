@@ -1,5 +1,6 @@
 
 from VeriFlow.Network import Network
+import socket
 
 ROUTE_VIEW = 1;
 BIT_BUCKET = 2;
@@ -7,10 +8,22 @@ BIT_BUCKET = 2;
 
 def main():
 	print("Enter network configuration file name (eg.: file.txt):");
-	# filename = input("> ");
-	filename = "Topo1.txt"
+	filename = input("> ");
 	network = Network();
 	network.parseNetworkFromFile(filename);
+	print("Enter IP address of the Controller")
+	ip = input("> ")
+	print("Enter Port for controller")
+	port = input("> ")
+
+	socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+	socket.bind(ip, port)
+
+	while False:
+		socket.listen()
+		socket.accept()
+		pass
+
 	generatedECs = network.getECsFromTrie();
 	network.checkWellformedness();
 	network.log(generatedECs);
