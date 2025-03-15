@@ -3,9 +3,9 @@ class Rule(object):
 	"""docstring for Rule"""
 	def __init__(self, prefix = None, switchId = None, nextHopId = None):
 		super(Rule, self).__init__()
-		self.prefix = prefix;
-		self.switchId = switchId;
-		self.nextHopId = nextHopId;
+		self.prefix = prefix
+		self.switchId = switchId
+		self.nextHopId = nextHopId
 
 
 	def equals(self, obj):
@@ -15,17 +15,17 @@ class Rule(object):
 		return obj.prefix == self.prefix and obj.switchId == self.switchId and obj.nextHopId == self.nextHopId
 
 	def decodeIpMask(self, ipMask):
-		splitMask = ipMask.split("/");
-		splitIp = splitMask[0].split(".");
-		output = "";
+		splitMask = ipMask.split("/")
+		splitIp = splitMask[0].split(".")
+		output = ""
 		for s in splitIp:
 			intValue = int(s)
 			output += self.toEightBitBinary(intValue)
 		return output[:int(splitMask[1])]
 
 	def toEightBitBinary(self, intValue):
-		binaryString = bin(intValue)[2:];
-		length = len(binaryString);
+		binaryString = bin(intValue)[2:]
+		length = len(binaryString)
 		for i in range(length, 8):
 			binaryString = "0" + binaryString
 		return binaryString
@@ -49,4 +49,4 @@ class Rule(object):
 		self.nextHopId = nextHopId
 
 	def matches(self, rulePrefix):
-		return rulePrefix.startsWith(prefix)
+		return rulePrefix.startswith(self.prefix)

@@ -15,4 +15,7 @@ class ForwardingGraph(object):
 
 	def contains(self, id):
 		return id in self.forwardingGraph
+	
+	def printForwardGraph(self):
+		pass
 		

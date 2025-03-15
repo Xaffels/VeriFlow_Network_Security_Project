@@ -17,9 +17,8 @@ class Interval(object):
 	def setLeft(self, left):
 		self.left = left
 	
-
 	def hashCode(self):
-		return Objects.hash(left, right)
+		return object.hash(self.left, self.right) #Objects
 
 	def equals(self, obj) :
 		if obj is None:
@@ -31,4 +30,4 @@ class Interval(object):
 		return eq
 
 	def toString(self):
-		return "[" + left + "," + right + ")"
+		return "[" + self.left + "," + self.right + "]"

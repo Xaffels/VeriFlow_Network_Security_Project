@@ -10,38 +10,38 @@ class TrieNode(object):
 		self.advertisedInterval = None
 
 	def getLeftChild(self):
-		return self.leftChild;
+		return self.leftChild
 	
 	def setLeftChild(self, leftChild):
-		self.leftChild = leftChild;
+		self.leftChild = leftChild
 	
 	def getRightChild(self):
-		return self.rightChild;
+		return self.rightChild
 	
 	def setRightChild(self, rightChild):
-		self.rightChild = rightChild;
+		self.rightChild = rightChild
 	
 	def isOpenLeft(self):
-		return self.openLeft;
+		return self.openLeft
 	
 	def setOpenLeft(self, openLeft):
-		self.openLeft = openLeft;
+		self.openLeft = openLeft
 	
 	def isOpenRight(self):
-		return self.openRight;
+		return self.openRight
 	
 	def setOpenRight(self, openRight):
-		self.openRight = openRight;
+		self.openRight = openRight
 
 	def getStarChild(self):
-		return self.starChild;
+		return self.starChild
 	
 	def setStarChild(self, starChild):
-		self.starChild = starChild;
+		self.starChild = starChild
 
 
 	def numberOfNonStarChildren(self):
-		num = 0;
+		num = 0
 		if (self.rightChild):
 			num+=1
 		if (self.leftChild):
@@ -50,40 +50,40 @@ class TrieNode(object):
 	
 
 	def getPath(self):
-		return self.getPossibleLeftEC();
+		return self.getPossibleLeftEC()
 
 	def setPath(self, path):
-		self.setPossibleLeftEC(path);
+		self.setPossibleLeftEC(path)
 
 	def getPossibleRightEC(self):
-		return self.possibleRightEC;
+		return self.possibleRightEC
 
 	def setPossibleRightEC(self, possibleRighttEC):
-		self.possibleRightEC = possibleRighttEC;
+		self.possibleRightEC = possibleRighttEC
 
 	def getPossibleLeftEC(self):
-		return self.possibleLeftEC;
+		return self.possibleLeftEC
 
 	def setPossibleLeftEC(self, possibleLeftEC):
-		self.possibleLeftEC = possibleLeftEC;
+		self.possibleLeftEC = possibleLeftEC
 
 	def getNodeValue(self):
-		return self.nodeValue;
+		return self.nodeValue
 
 	def setNodeValue(self, nodeValue):
-		self.nodeValue = nodeValue;
+		self.nodeValue = nodeValue
 
 	def getEcs(self):
-		return self.ecs;
+		return self.ecs
 
 	def setEcs(self, ecs):
-		self.ecs = ecs;
+		self.ecs = ecs
 
 	def addEC (self, ec):
-		self.ecs.add(ec);
+		self.ecs.add(ec)
 
 	def getAdvertisedInterval(self):
-		return self.advertisedInterval;
+		return self.advertisedInterval
 
 	def setAdvertisedInterval(self, advertisedInterval):
-		self.advertisedInterval = advertisedInterval;
+		self.advertisedInterval = advertisedInterval

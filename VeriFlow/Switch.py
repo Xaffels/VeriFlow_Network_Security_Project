@@ -14,37 +14,37 @@ class Switch(object):
 		return None
 
 	def getId(self): 
-		return self.id;
+		return self.id
 	
 	def setId(self, id):
-		self.id = id;
+		self.id = id
 
 	def addNextHop(self, nextHop):
-		self.nextHops.append(nextHop);
+		self.nextHops.append(nextHop)
 	
 	def addConnectedHost(self, id):
-		self.connectedHosts.append(id);
+		self.connectedHosts.append(id)
 	
 
 	def getNextHops(self):
-		return self.nextHops;
+		return self.nextHops
 
 	def setNextHops(self, nextHops):
-		self.nextHops = nextHops;
+		self.nextHops = nextHops
 
 	def addRule(self, newRule):
-		self.rules.insert(0, newRule);
+		self.rules.insert(0, newRule)
 
 	def setRules(self, rules):
 		self.rules = rules
 	
 	def getRules(self):
-		return self.rules;
+		return self.rules
 	
 
 	def getConnectedHosts(self): 
-		return self.connectedHosts;
+		return self.connectedHosts
 
 	def setConnectedHosts(self, connectedHosts):
-		self.connectedHosts = connectedHosts;
+		self.connectedHosts = connectedHosts
 	
